@@ -77,7 +77,7 @@ int main() {
 
     printf ("\n--------------------------------------------------------------\n");
  
-    // Exibindo as informações coletadas da Segunda Carta utilizando printf
+    // Exibindo as informações coletadas da Segunda Carta utilizando printf 
     printf("\nCarta 2:\n");
     printf ("Estado: %c \n", estado2);
     printf ("Código: %s \n", codigo_da_carta2);
