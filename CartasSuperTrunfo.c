@@ -9,6 +9,8 @@ int main() {
     float area_em_km21, area_em_km22;
     float PIB1, PIB2;
     int numero_de_pontos_turisticos1, numero_de_pontos_turisticos2;
+    float densidadePopulacional1, densidadePopulacional2;
+    float PIBPercapta1, PIBPercapta2;
 
     // Recebimento das Informações da Primeira Carta utilizando o scanf
    
@@ -34,6 +36,10 @@ int main() {
 
     printf("\nQual o número de Pontos Turístico?: \n"); // O scanf recebe um número inteiro e armazena em numero_de_pontos_turisticos1
     scanf ("%d", &numero_de_pontos_turisticos1);
+
+    // Cálcular a densidade populacional e o PIB per capita. (Nível Veterano)
+    densidadePopulacional1 = (populacao1 / area_em_km21);
+    PIBPercapta1 = (PIB1 / populacao1 );
 
     printf ("\n--------------------------------------------------------------\n");
    
@@ -61,6 +67,10 @@ int main() {
     printf("\nQual o número de Pontos Turístico?: \n");
     scanf ("%d", &numero_de_pontos_turisticos2);
 
+    // Cálcular a densidade populacional e o PIB per capita. (Nível Veterano)
+    densidadePopulacional2 = (populacao2 / area_em_km22);
+    PIBPercapta2 = (PIB2 / populacao2 );
+
     printf ("\n--------------------------------------------------------------\n");
     
     // Exibindo as informações coletadas da Primeira Carta utilizando printf
@@ -72,20 +82,25 @@ int main() {
     printf ("Nome da Cidade: %s \n", nome_da_cidade1);
     printf ("População: %d \n", populacao1);
     printf ("Área: %.2f km² \n", area_em_km21);
-    printf ("PIB: %.2f Bilhões de reais\n", PIB1);
+    printf ("PIB: R$%.2f Bilhões \n", PIB1);
     printf ("Número de Pontos Turísticos: %d \n", numero_de_pontos_turisticos1);
+    printf ("Densidade Populacional: %.2f de Pessoas por km² \n", densidadePopulacional1);
+    printf ("PIB Per Capta: R$%.2f \n", PIBPercapta1);
 
     printf ("\n--------------------------------------------------------------\n");
  
     // Exibindo as informações coletadas da Segunda Carta utilizando printf 
+
     printf("\nCarta 2:\n");
     printf ("Estado: %c \n", estado2);
     printf ("Código: %s \n", codigo_da_carta2);
     printf ("Nome da Cidade: %s \n", nome_da_cidade2);
     printf ("População: %d \n", populacao2);
     printf ("Área: %.2f km² \n", area_em_km22);
-    printf ("PIB: %.2f Bilhões de reais \n", PIB2);
+    printf ("PIB: R$%.2f Bilhões \n", PIB2);
     printf ("Número de Pontos Turísticos: %d \n", numero_de_pontos_turisticos2);
+    printf ("Densidade Populacional: %.2f de Pessoas por km² \n", densidadePopulacional2);
+    printf ("PIB Per Capta: R$%.2f \n", PIBPercapta2);
 
     return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
 }
