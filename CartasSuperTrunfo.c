@@ -5,7 +5,7 @@ int main() {
     char estado1, estado2;
     char codigo_da_carta1[4], codigo_da_carta2 [4];
     char nome_da_cidade1[15], nome_da_cidade2[15];
-    int populacao1, populacao2;
+    unsigned long int populacao1, populacao2;
     float area_em_km21, area_em_km22;
     float PIB1, PIB2;
     int numero_de_pontos_turisticos1, numero_de_pontos_turisticos2;
@@ -26,7 +26,7 @@ int main() {
     scanf ("%s", nome_da_cidade1);
 
     printf ("\nQual a População da Cidade?: \n");  // O scanf recebe um número inteiro e armazena em populacao1
-    scanf ("%d", &populacao1);
+    scanf ("%u", &populacao1);
 
     printf ("\nQual a Área (em km²)?: \n "); // O scanf recebe um número decimal (float) e armazena em area_em_km21
     scanf ("%f", &area_em_km21);
@@ -56,7 +56,7 @@ int main() {
     scanf ("%s", nome_da_cidade2);
 
     printf ("\nQual a População da Cidade?: \n");
-    scanf ("%d", &populacao2);
+    scanf ("%u", &populacao2);
 
     printf ("\nQual a Área (em km²)?: \n ");
     scanf ("%f", &area_em_km22);
@@ -75,12 +75,11 @@ int main() {
     
     // Exibindo as informações coletadas da Primeira Carta utilizando printf
 
-    // O printf exibe os valores armazenados nas variáveis formatados corretamente
     printf("Carta 1:\n");
     printf ("Estado: %c \n", estado1);
     printf ("Código: %s \n", codigo_da_carta1);
     printf ("Nome da Cidade: %s \n", nome_da_cidade1);
-    printf ("População: %d \n", populacao1);
+    printf ("População: %u \n", populacao1);
     printf ("Área: %.2f km² \n", area_em_km21);
     printf ("PIB: R$%.2f Bilhões \n", PIB1);
     printf ("Número de Pontos Turísticos: %d \n", numero_de_pontos_turisticos1);
@@ -95,12 +94,12 @@ int main() {
     printf ("Estado: %c \n", estado2);
     printf ("Código: %s \n", codigo_da_carta2);
     printf ("Nome da Cidade: %s \n", nome_da_cidade2);
-    printf ("População: %d \n", populacao2);
+    printf ("População: %u \n", populacao2);
     printf ("Área: %.2f km² \n", area_em_km22);
     printf ("PIB: R$%.2f Bilhões \n", PIB2);
     printf ("Número de Pontos Turísticos: %d \n", numero_de_pontos_turisticos2);
     printf ("Densidade Populacional: %.2f de Pessoas por km² \n", densidadePopulacional2);
     printf ("PIB Per Capta: R$%.2f \n", PIBPercapta2);
 
-    return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
+    return 0;
 }
